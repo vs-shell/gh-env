@@ -32,8 +32,8 @@ jobs:
       - name: Output information
         run: |
           echo "MONGODB_USERNAME : ${{env.MONGODB_USERNAME}}"
-          echo "MY_NAME : ${{secrets.MY_NAME}}"
-          echo "MY_NAME : ${{env.MY_NAME}}"
+          echo "MY_NAME : ${{vars.MY_NAME}}"
+          echo "MY_NAME : ${{vars.MY_NAME}}"
   deploy:
     needs: test
     runs-on: ubuntu-latest
